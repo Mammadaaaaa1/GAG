@@ -1,6 +1,7 @@
--- Do not save this file
--- Always use the loadstring 
-  _bsdata0 = {{3079056027,1753640466,417789},1580750646,785507,"\241\0\0\0","-31E3DFH5FCH1C4!E2CF0-HC3EB1D-B434CEF113H-BD2HACH6EEC031CAB4BDB-D2EFB62AFC4CC0BB40E15604E1-5A4CBH20-C5464-534E2!02-3451C","f56c8fbcb21d79fec6602feb0a2c3d2a6138b8952f36507100b998d75acc7a61772f922388aef3752bde9808d9c9eee95b114acd44ddd2d69cda764c6e5b401412b95e16fb15e225fe3310ac55161b759a1bc969bf07e53cfa24e31a8d11a41cd91ad59a88524c24e90f1b22ea4ae285431e0fe33951f7dc4916a5954f51d97690a579cd41968a6ef73da0a2c3efb6259004d867326d675b449fbfc8d2f09c279dc57b8ad91fab4dd558be7fcd899bb5a41a1ecd092c3f2e188f99010d96abbed5dd8bfcd3afe5"};
-pcall(function() delfile('0e08efc5390446f12bb3f48e59cc6766-cache.lua') end)
-  local a pcall(function()a=readfile("static_content_130525/initv4.lua")end) if a and #a>2000 then a=loadstring(a) end;
-if a then return a() else pcall(makefolder, "static_content_130525") a=game:HttpGet("https://cdn.luarmor.net/v4_init_may312.lua") writefile("static_content_130525/initv4.lua", a) pcall(delfile, "static_content_130525/init.lua"); pcall(delfile, "static_content_130525/initv2.lua"); pcall(delfile, "static_content_130525/initv3.lua"); loadstring(a)() end
+task.spawn(function()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0e08efc5390446f12bb3f48e59cc6766.lua"))()
+end)
+
+local genv = getgenv()
+repeat task.wait() until genv.Spawner and genv.Spawner.Load
+return genv.Spawner
